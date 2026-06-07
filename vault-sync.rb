@@ -8,7 +8,7 @@ class VaultSync < Formula
   stable do
     url "https://github.com/ishyverma/vault-sync.git",
         tag:      "v1.0.0",
-        revision: "3bb61560de1b374b36a69742da5c325fe5d5e0ad"
+        revision: "c23493c1a184d79d11e3cf12f4d6de9a1cb32d87"
   end
 
   head do
@@ -16,7 +16,6 @@ class VaultSync < Formula
   end
 
   def install
-    ENV["CGO_ENABLED"] = "0"
     ldflags = "-s -w -X main.version=#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"vault"), "./cmd/vault"
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"vaultd"), "./cmd/vaultd"
