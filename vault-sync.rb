@@ -7,8 +7,8 @@ class VaultSync < Formula
 
   stable do
     url "https://github.com/ishyverma/vault-sync.git",
-        tag: "v1.0.1",
-        revision: "7805d71e51cf9ec214bf2dfa008dc24d830d876c"
+        tag: "v0.1.0",
+        revision: "d5fb346958e3da53dd716758b82e6930963d0fa8"
   end
 
   head do
